@@ -19,7 +19,7 @@ ui:
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
 
 outgoing: # communication with search engines
-    request_timeout : 2.0 # seconds
+    request_timeout : 1.0 # seconds
     useragent_suffix : "" # suffix of searx_useragent, could contain informations like an email address to the administrator
     pool_connections : 100 # Number of different hosts
     pool_maxsize : 10 # Number of simultaneous requests by host
@@ -101,11 +101,12 @@ engines:
     engine : deviantart
     shortcut : da
     timeout: 3.0
+    disabled : True
 
   - name : ddg definitions
     engine : duckduckgo_definitions
     shortcut : ddd
-    disabled : True
+    #disabled : True
 
   - name : digg
     engine : digg
@@ -131,7 +132,7 @@ engines:
   - name : duckduckgo
     engine : duckduckgo
     shortcut : ddg
-    disabled : True
+    #disabled : True
 
 # api-key required: http://www.faroo.com/hp/api/api.html#key
 #  - name : faroo
@@ -233,7 +234,7 @@ engines:
     content_xpath : //a[@class="subtitle"]
     categories : videos
     shortcut : gpm
-    disabled : True
+    #disabled : True
 
   - name : google play music
     engine        : xpath
@@ -243,7 +244,7 @@ engines:
     content_xpath : //a[@class="subtitle"]
     categories : music
     shortcut : gps
-    disabled : True
+    #disabled : True
 
   - name : geektimes
     engine : xpath
@@ -278,6 +279,7 @@ engines:
   - name : mixcloud
     engine : mixcloud
     shortcut : mc
+    disabled : True
 
   - name : nyaa
     engine : nyaa
@@ -328,6 +330,7 @@ engines:
   - name : kickass
     engine : kickass
     shortcut : ka
+    disabled : True
 
   - name : scanr_structures
     shortcut: scs
@@ -391,6 +394,7 @@ engines:
     engine : torrentz
     timeout : 5.0
     shortcut : to
+    disabled : True
 
   - name : twitter
     engine : twitter
@@ -415,6 +419,7 @@ engines:
   - name : yahoo
     engine : yahoo
     shortcut : yh
+    base_url : 'https://au.search.yahoo.com/'
 
   - name : yandex
     engine : yandex
