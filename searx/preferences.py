@@ -223,7 +223,7 @@ class Preferences(object):
                                                              map={'': settings['server']['image_proxy'],
                                                                   '0': False,
                                                                   '1': True}),
-                                   'method': EnumStringSetting('POST', choices=('GET', 'POST')),
+                                   'method': EnumStringSetting('GET', choices=('GET', 'POST')),
                                    'safesearch': MapSetting(settings['search']['safe_search'], map={'0': 0,
                                                                                                     '1': 1,
                                                                                                     '2': 2}),
