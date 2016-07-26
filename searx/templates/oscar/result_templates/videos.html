@@ -15,13 +15,16 @@
 
 <div class="container-fluid">
     <div class="row">
-        <a href="{{ result.url }}" rel="noreferrer"><img class="thumbnail col-xs-6 col-sm-4 col-md-4 result-content" src="{{ image_proxify(result.thumbnail) }}" alt="{{ result.title|striptags }} {{ result.engine }}" /></a>
-        {% if result.content %}<p class="col-xs-12 col-sm-8 col-md-8 result-content">{{ result.content|safe }}</p>{% endif %}
+        <a href="{{ result.url }}" rel="noreferrer"><img class="thumbnail col-xs-6 col-sm-2 col-md-2 result-content" src="{{ image_proxify(result.thumbnail) }}" alt="{{ result.title|striptags }} {{ result.engine }}" /></a>
+        {% if result.content %}
+        <div class="col-xs-12 col-sm-10 col-md-10 result-content">
+          {% if rtl %}
+          {{ result_footer_rtl(result) }}
+          {% else %}
+          {{ result_footer(result) }}
+          {% endif %}
+          {{ result.content|safe }}
+        </div>
+        {% endif %}
     </div>
 </div>
-
-{% if rtl %}
-{{ result_footer_rtl(result) }}
-{% else %}
-{{ result_footer(result) }}
-{% endif %}

@@ -1,26 +1,28 @@
 .result_header {
-    margin-top: 6px;
-    margin-bottom: 4px;
-    font-size: 16px;
+    margin-top: 23px;
+    margin-bottom: 0px;
+    font-size: 18px;
 
     .favicon {
         margin-bottom:-3px;
     }
-    
+
     a {
-        color: @black;
+        color: #1a0dab;
         text-decoration: none;
 
         &:hover{
-            color: @blue;
+            text-decoration: underline;
         }
 
         &:visited{
-            color: @violet;
+            color: #609;
         }
-        
+
         .highlight {
-            background-color: @dim-gray;
+          font-weight: normal;
+          background: none;
+            //background-color: @dim-gray;
             // Chrome hack: bold is different size than normal
             // https://stackoverflow.com/questions/20713988/weird-text-alignment-issue-in-css-when-bolded-lucida-sans
         }
@@ -31,14 +33,20 @@
     margin-top: 2px;
     margin-bottom: 0;
     word-wrap: break-word;
-    color: @dark-gray;
+    color: #545454;
     font-size: 13px;
 
 
     .highlight {
         font-weight:bold;
+        background:none;
     }
 
+}
+
+.text-muted {
+  color: #006621;
+  small { font-size: 14px; }
 }
 
 .external-link, .external-link a{
@@ -54,7 +62,7 @@
     clear: both;
     padding: 2px 4px;
     &:hover{
-        background-color: @dim-gray;
+        //background-color: @dim-gray;
     }
 }
 
